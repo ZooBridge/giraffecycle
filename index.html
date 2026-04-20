@@ -50,7 +50,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 30px 50px;
+      padding: 30px 50px 24px;
       background: linear-gradient(135deg, #2e2018, #4a3326);
       color: white;
       flex-wrap: wrap;
@@ -71,6 +71,7 @@
       font-size: 19px;
       color: #d8cfc9;
       margin-bottom: 20px;
+      line-height: 1.45;
     }
 
     .button {
@@ -97,16 +98,18 @@
     .hero-slide img {
       width: 100%;
       border-radius: 14px;
+      display: block;
     }
 
-    /* SECTIONS */
+    /* GENERAL SECTIONS */
     .section {
-      padding: 40px 20px;
+      padding: 20px 20px;
       text-align: center;
     }
 
     .section h2 {
-      margin-bottom: 20px;
+      margin: 0 0 14px;
+      font-size: 22px;
     }
 
     /* FEATURES */
@@ -114,12 +117,13 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 18px;
+      gap: 16px;
+      margin-top: 20px;
     }
 
     .feature {
       background: white;
-      padding: 18px;
+      padding: 16px;
       border-radius: 14px;
       width: 220px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
@@ -132,7 +136,12 @@
 
     .feature h3 {
       color: #cf8c25;
-      margin-bottom: 8px;
+      margin: 0 0 8px;
+    }
+
+    .feature p {
+      margin: 0;
+      line-height: 1.4;
     }
 
     /* HIGHLIGHT */
@@ -143,6 +152,7 @@
       max-width: 760px;
       margin: auto;
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      border: 1px solid #e2d6c4;
     }
 
     .status {
@@ -152,28 +162,83 @@
       display: inline-block;
       font-weight: bold;
       margin-bottom: 12px;
+      color: #0f3c28;
     }
 
-    /* CONTACT */
+    /* CONTACT + SPONSOR */
     .contact {
-      margin-top: 30px;
+      margin-top: 10px;
+    }
+
+    .contact p {
+      margin: 0 auto;
+      max-width: 650px;
+      line-height: 1.45;
     }
 
     .contact-email {
       font-weight: bold;
+      margin-top: 5px;
+      font-size: 18px;
+    }
+
+    .sponsor {
       margin-top: 10px;
     }
 
-    /* SPONSOR */
+    .sponsor p {
+      margin: 0 auto 10px;
+      color: #6f5c52;
+      line-height: 1.45;
+      max-width: 600px;
+    }
+
     .sponsor img {
-      height: 60px;
-      margin-top: 10px;
+      height: 50px;
+      margin-top: 5px;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 12px;
       color: #6f5c52;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 16px 18px;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+
+      .hero {
+        padding: 22px 18px 18px;
+        text-align: center;
+        gap: 24px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .hero-slideshow {
+        width: 210px;
+      }
+
+      .feature {
+        width: 100%;
+        max-width: 250px;
+      }
     }
   </style>
 </head>
@@ -182,7 +247,7 @@
 
 <header>
   <div class="logo-area">
-    <img src="logo.jpeg">
+    <img src="logo.jpeg" alt="GiraffeCycle Logo">
     <span class="logo-text">Giraffe<span>Cycle</span>™</span>
   </div>
 
@@ -211,10 +276,22 @@
   <h2>Key Features</h2>
 
   <div class="features">
-    <div class="feature"><h3>Behavior Tracking</h3><p>Log behaviors daily.</p></div>
-    <div class="feature"><h3>Estrus Detection</h3><p>Identify real cycles.</p></div>
-    <div class="feature"><h3>Breeding Windows</h3><p>Know when to act.</p></div>
-    <div class="feature"><h3>Individual Tracking</h3><p>Track each giraffe.</p></div>
+    <div class="feature">
+      <h3>Behavior Tracking</h3>
+      <p>Easily log daily reproductive behaviors.</p>
+    </div>
+    <div class="feature">
+      <h3>Estrus Detection</h3>
+      <p>Identify cycles from real patterns.</p>
+    </div>
+    <div class="feature">
+      <h3>Breeding Windows</h3>
+      <p>Know when to prepare and act.</p>
+    </div>
+    <div class="feature">
+      <h3>Individual Tracking</h3>
+      <p>Track each giraffe.</p>
+    </div>
   </div>
 </section>
 
@@ -226,7 +303,7 @@
   </div>
 </section>
 
-<section class="section contact" id="contact">
+<section class="section contact" id="contact" style="padding-bottom: 5px;">
   <h2>Get in Touch</h2>
   <p>Have questions? Reach out anytime.</p>
   <p class="contact-email">info@giraffecycle.org</p>
@@ -235,11 +312,11 @@
 <section class="section sponsor">
   <h2>Development Sponsor</h2>
   <p>Supported by Lincoln Children's Zoo.</p>
-  <img src="lincolnzoo.png">
+  <img src="lincolnzoo.png" alt="Lincoln Children's Zoo Logo">
 </section>
 
 <footer>
-  © 2026 GiraffeCycle®<br>
+  © 2026 GiraffeCycle™<br>
   ZooBridge Systems LLC
 </footer>
 
