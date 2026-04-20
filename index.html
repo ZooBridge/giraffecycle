@@ -5,7 +5,7 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       background-color: #efedde;
       color: #20120d;
     }
@@ -17,6 +17,8 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
     header img {
@@ -37,6 +39,7 @@
       padding: 80px 60px;
       background-color: #efedde;
       flex-wrap: wrap;
+      gap: 40px;
     }
 
     .hero-text {
@@ -46,12 +49,14 @@
     .hero h1 {
       font-size: 60px;
       margin-bottom: 20px;
+      line-height: 1.1;
     }
 
     .hero p {
       font-size: 20px;
       color: #6f5c52;
       margin-bottom: 30px;
+      line-height: 1.5;
     }
 
     .button {
@@ -61,6 +66,7 @@
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
+      display: inline-block;
     }
 
     .hero-image img {
@@ -68,11 +74,16 @@
       border-radius: 20px;
       background: white;
       padding: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
 
     .section {
       padding: 60px 40px;
       text-align: center;
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
     }
 
     .features {
@@ -95,16 +106,6 @@
       margin-bottom: 10px;
       color: #cf8c25;
     }
-     <section class="section">
-  <h2>Development Sponsor</h2>
-
-  <p style="max-width: 600px; margin: 0 auto 30px; color: #6f5c52;">
-    GiraffeCycle is proudly supported by Lincoln Children's Zoo,
-    whose collaboration and insight have helped shape the development of this platform.
-  </p>
-
-  <img src="lincolnzoo.png" alt="Lincoln Children's Zoo Logo" style="height: 80px;">
-</section>
 
     .highlight {
       background-color: white;
@@ -125,16 +126,123 @@
       margin-bottom: 15px;
     }
 
+    .slideshow-container {
+      position: relative;
+      max-width: 420px;
+      margin: 40px auto 0;
+    }
+
+    .slide {
+      display: none;
+    }
+
+    .slide img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 24px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+      background: white;
+    }
+
+    .slide p {
+      max-width: 420px;
+      margin: 18px auto 0;
+      color: #6f5c52;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 42%;
+      transform: translateY(-50%);
+      padding: 10px 14px;
+      color: #20120d;
+      font-size: 28px;
+      font-weight: bold;
+      user-select: none;
+      background: rgba(255,255,255,0.85);
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+
+    .prev {
+      left: -10px;
+    }
+
+    .next {
+      right: -10px;
+    }
+
+    .fade {
+      animation: fade 0.5s;
+    }
+
+    @keyframes fade {
+      from { opacity: .4; }
+      to { opacity: 1; }
+    }
+
     .contact {
       background-color: #f3e3cf;
       padding: 60px 20px;
       text-align: center;
     }
 
+    .contact-email {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #20120d;
+    }
+
     footer {
       padding: 30px;
       color: #6f5c52;
       text-align: center;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 20px;
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+
+      .hero {
+        padding: 50px 25px;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .hero-image img {
+        width: 260px;
+      }
+
+      .section {
+        padding: 50px 20px;
+      }
+
+      .prev {
+        left: 0;
+      }
+
+      .next {
+        right: 0;
+      }
     }
   </style>
 </head>
@@ -146,6 +254,7 @@
 
   <nav>
     <a href="#features">Features</a>
+    <a href="#screenshots">Screenshots</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -171,7 +280,6 @@
   <h2>Key Features</h2>
 
   <div class="features">
-
     <div class="feature">
       <h3>Behavior Tracking</h3>
       <p>Easily log daily reproductive behaviors using a clean interface.</p>
@@ -191,8 +299,18 @@
       <h3>Individual Tracking</h3>
       <p>Track each giraffe’s reproductive history in one place.</p>
     </div>
-
   </div>
+</section>
+
+<section class="section">
+  <h2>Development Sponsor</h2>
+
+  <p style="max-width: 600px; margin: 0 auto 30px; color: #6f5c52; line-height: 1.5;">
+    GiraffeCycle is proudly supported by Lincoln Children's Zoo,
+    whose collaboration and insight have helped shape the development of this platform.
+  </p>
+
+  <img src="lincolnzoo.png" alt="Lincoln Children's Zoo Logo" style="height: 80px;">
 </section>
 
 <section class="section">
@@ -208,6 +326,39 @@
   </div>
 </section>
 
+<section class="section" id="screenshots">
+  <h2>See GiraffeCycle® in Action</h2>
+  <p style="max-width: 700px; margin: 0 auto; color: #6f5c52; line-height: 1.5;">
+    Track behavior, monitor cycles, and support breeding decisions through a simple,
+    mobile-friendly experience designed for everyday zoo use.
+  </p>
+
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="Mobile dashboard.jpg" alt="GiraffeCycle dashboard">
+      <p>View your entire herd and breeding status at a glance.</p>
+    </div>
+
+    <div class="slide fade">
+      <img src="Mobile GiraffeDetail.jpg" alt="Individual giraffe profile">
+      <p>Track each giraffe’s reproductive cycle and key dates.</p>
+    </div>
+
+    <div class="slide fade">
+      <img src="Mobile GiraffeDetail2.jpg" alt="Birth window and breeding history">
+      <p>Predict birth windows and review breeding history.</p>
+    </div>
+
+    <div class="slide fade">
+      <img src="Mobile Onboarding.jpg" alt="Onboarding screen">
+      <p>Quickly set up your organization and start tracking.</p>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+</section>
+
 <section class="contact" id="contact">
   <h2>Get in Touch</h2>
 
@@ -216,15 +367,32 @@
     Reach out and we’ll be happy to connect.
   </p>
 
-  <a <p style="font-size: 20px; font-weight: bold; margin-top: 20px;">
-  info@giraffecycle.org
-</p></a>
+  <p class="contact-email">info@giraffecycle.org</p>
 </section>
 
 <footer>
-  © 2026 GiraffeCycle<br>
-A product of ZooBridge Systems LLC
+  © 2026 GiraffeCycle®<br>
+  A product of ZooBridge Systems LLC
 </footer>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides(n) {
+    let slides = document.getElementsByClassName("slide");
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+  }
+</script>
 
 </body>
 </html>
