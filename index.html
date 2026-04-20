@@ -117,6 +117,10 @@
       font-size: 22px;
     }
 
+    .alt-section {
+      background-color: #f7f2e8;
+    }
+
     .features {
       display: flex;
       flex-wrap: wrap;
@@ -126,11 +130,18 @@
     }
 
     .feature {
-      background-color: white;
+      background: linear-gradient(145deg, #ffffff, #f6f1e7);
+      border: 1px solid #e8dccb;
       padding: 16px;
       border-radius: 14px;
       width: 210px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.2s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
 
     .feature h3 {
@@ -171,7 +182,7 @@
     }
 
     .contact {
-      background-color: #f3e3cf;
+      background: linear-gradient(180deg, #f3e3cf, #ead6b8);
       padding: 24px 20px;
       text-align: center;
     }
@@ -296,7 +307,7 @@
   </div>
 </section>
 
-<section class="section" id="features">
+<section class="section alt-section" id="features">
   <h2>Key Features</h2>
 
   <div class="features">
