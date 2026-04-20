@@ -6,7 +6,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #efedde;
+      background: linear-gradient(180deg, #f4efe6 0%, #e9e3d7 100%);
       color: #20120d;
     }
 
@@ -32,7 +32,6 @@
     .logo-text {
       font-size: 24px;
       font-weight: bold;
-      color: #20120d;
     }
 
     .logo-text span {
@@ -44,14 +43,14 @@
       text-decoration: none;
       font-weight: bold;
       color: #20120d;
-      font-size: 15px;
     }
 
+    /* HERO */
     .hero {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 22px 50px 18px;
+      padding: 30px 50px;
       background: linear-gradient(135deg, #2e2018, #4a3326);
       color: white;
       flex-wrap: wrap;
@@ -72,7 +71,6 @@
       font-size: 19px;
       color: #d8cfc9;
       margin-bottom: 20px;
-      line-height: 1.45;
     }
 
     .button {
@@ -82,15 +80,10 @@
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
-      display: inline-block;
-    }
-
-    .hero-image {
-      margin-top: -8px;
     }
 
     .hero-slideshow {
-      width: 235px;
+      width: 240px;
       background: white;
       padding: 12px;
       border-radius: 18px;
@@ -104,164 +97,83 @@
     .hero-slide img {
       width: 100%;
       border-radius: 14px;
-      display: block;
     }
 
+    /* SECTIONS */
     .section {
-      padding: 28px 30px;
+      padding: 40px 20px;
       text-align: center;
     }
 
     .section h2 {
-      margin: 0 0 14px;
-      font-size: 22px;
+      margin-bottom: 20px;
     }
 
-    .features-section {
-      background-color: #f5efe3;
-      border-top: 1px solid #e5dccf;
-    }
-
-    .workflow-section {
-      background-color: #e8e3d9;
-      border-top: 1px solid #ddd3c5;
-    }
-
+    /* FEATURES */
     .features {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 16px;
-      margin-top: 20px;
+      gap: 18px;
     }
 
     .feature {
-      background: linear-gradient(145deg, #ffffff, #f8f4ec);
-      border: 1px solid #e8dccb;
-      padding: 16px;
+      background: white;
+      padding: 18px;
       border-radius: 14px;
-      width: 210px;
+      width: 220px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-      transition: all 0.2s ease;
+      transition: 0.2s;
     }
 
     .feature:hover {
       transform: translateY(-4px);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
     }
 
     .feature h3 {
-      margin: 0 0 8px;
       color: #cf8c25;
-      font-size: 18px;
+      margin-bottom: 8px;
     }
 
-    .feature p {
-      margin: 0;
-      line-height: 1.4;
-      font-size: 15px;
-    }
-
+    /* HIGHLIGHT */
     .highlight {
-      background-color: white;
-      padding: 20px;
+      background: white;
+      padding: 24px;
       border-radius: 18px;
       max-width: 760px;
       margin: auto;
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-      border: 1px solid #e2d6c4;
     }
 
     .status {
-      background-color: #43d67a;
-      color: #0f3c28;
+      background: #43d67a;
       padding: 8px 16px;
       border-radius: 25px;
       display: inline-block;
       font-weight: bold;
       margin-bottom: 12px;
-      font-size: 15px;
     }
 
+    /* CONTACT */
     .contact {
-      background: linear-gradient(180deg, #e8d2b0, #d9be92);
-      padding: 28px 20px;
-      text-align: center;
-      border-top: 1px solid #d4b785;
-    }
-
-    .contact p {
-      margin: 0 auto;
-      max-width: 650px;
-      line-height: 1.45;
+      margin-top: 30px;
     }
 
     .contact-email {
-      font-size: 18px;
       font-weight: bold;
-      margin-top: 16px;
+      margin-top: 10px;
     }
 
-    .sponsor {
-      background-color: #efedde;
-      padding-top: 22px;
-      padding-bottom: 22px;
-      border-top: 1px solid #e5dccf;
-    }
-
-    .sponsor p {
-      max-width: 600px;
-      margin: 0 auto 16px;
-      color: #6f5c52;
-      line-height: 1.45;
-    }
-
+    /* SPONSOR */
     .sponsor img {
       height: 60px;
+      margin-top: 10px;
     }
 
     footer {
-      padding: 18px;
-      color: #6f5c52;
       text-align: center;
-      line-height: 1.5;
-      font-size: 14px;
-      background-color: #efedde;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        padding: 16px 18px;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      nav a {
-        margin: 0 10px;
-      }
-
-      .hero {
-        padding: 22px 18px 18px;
-        text-align: center;
-        gap: 24px;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      .hero-slideshow {
-        width: 210px;
-      }
-
-      .feature {
-        width: 100%;
-        max-width: 250px;
-      }
+      padding: 20px;
+      color: #6f5c52;
     }
   </style>
 </head>
@@ -270,7 +182,7 @@
 
 <header>
   <div class="logo-area">
-    <img src="logo.jpeg" alt="GiraffeCycle Logo">
+    <img src="logo.jpeg">
     <span class="logo-text">Giraffe<span>Cycle</span>™</span>
   </div>
 
@@ -283,68 +195,52 @@
 <section class="hero">
   <div class="hero-text">
     <h1>Smarter breeding decisions for modern animal care teams.</h1>
-    <p>
-      GiraffeCycle helps zoos track estrus behaviors, identify active breeding
-      windows, and organize reproductive data in one clear, keeper-friendly system.
-    </p>
+    <p>Track estrus behaviors, identify breeding windows, and organize reproductive data.</p>
     <a class="button" href="mailto:info@giraffecycle.org">Contact Us</a>
   </div>
 
-  <div class="hero-image">
-    <div class="hero-slideshow">
-      <div class="hero-slide"><img src="Mobile dashboard.jpg" alt="Dashboard"></div>
-      <div class="hero-slide"><img src="Mobile GiraffeDetail.jpg" alt="Giraffe detail"></div>
-      <div class="hero-slide"><img src="Mobile GiraffeDetail2.jpg" alt="History and birth window"></div>
-      <div class="hero-slide"><img src="Mobile Onboarding.jpg" alt="Onboarding"></div>
-    </div>
+  <div class="hero-slideshow">
+    <div class="hero-slide"><img src="Mobile dashboard.jpg"></div>
+    <div class="hero-slide"><img src="Mobile GiraffeDetail.jpg"></div>
+    <div class="hero-slide"><img src="Mobile GiraffeDetail2.jpg"></div>
+    <div class="hero-slide"><img src="Mobile Onboarding.jpg"></div>
   </div>
 </section>
 
-<section class="section features-section" id="features">
+<section class="section" id="features">
   <h2>Key Features</h2>
+
   <div class="features">
-    <div class="feature">
-      <h3>Behavior Tracking</h3>
-      <p>Easily log daily reproductive behaviors.</p>
-    </div>
-    <div class="feature">
-      <h3>Estrus Detection</h3>
-      <p>Identify cycles from real patterns.</p>
-    </div>
-    <div class="feature">
-      <h3>Breeding Windows</h3>
-      <p>Know when to prepare and act.</p>
-    </div>
-    <div class="feature">
-      <h3>Individual Tracking</h3>
-      <p>Track each giraffe’s history.</p>
-    </div>
+    <div class="feature"><h3>Behavior Tracking</h3><p>Log behaviors daily.</p></div>
+    <div class="feature"><h3>Estrus Detection</h3><p>Identify real cycles.</p></div>
+    <div class="feature"><h3>Breeding Windows</h3><p>Know when to act.</p></div>
+    <div class="feature"><h3>Individual Tracking</h3><p>Track each giraffe.</p></div>
   </div>
 </section>
 
-<section class="section workflow-section">
+<section class="section">
   <div class="highlight">
     <div class="status">Breed Now</div>
     <h2>Built for Real Zoo Workflows</h2>
-    <p>Designed for keepers and managers to turn observations into breeding decisions.</p>
+    <p>Designed for keepers and managers to turn observations into decisions.</p>
   </div>
 </section>
 
-<section class="contact" id="contact">
+<section class="section contact" id="contact">
   <h2>Get in Touch</h2>
-  <p>Have questions or want to learn more? Reach out anytime.</p>
+  <p>Have questions? Reach out anytime.</p>
   <p class="contact-email">info@giraffecycle.org</p>
 </section>
 
 <section class="section sponsor">
   <h2>Development Sponsor</h2>
-  <p>GiraffeCycle is proudly supported by Lincoln Children's Zoo.</p>
-  <img src="lincolnzoo.png" alt="Lincoln Children's Zoo Logo">
+  <p>Supported by Lincoln Children's Zoo.</p>
+  <img src="lincolnzoo.png">
 </section>
 
 <footer>
   © 2026 GiraffeCycle®<br>
-  A product of ZooBridge Systems LLC
+  ZooBridge Systems LLC
 </footer>
 
 <script>
@@ -357,9 +253,7 @@
       slides[i].style.display = "none";
     }
     heroSlideIndex++;
-    if (heroSlideIndex > slides.length) {
-      heroSlideIndex = 1;
-    }
+    if (heroSlideIndex > slides.length) { heroSlideIndex = 1; }
     slides[heroSlideIndex - 1].style.display = "block";
     setTimeout(autoHeroSlides, 3000);
   }
