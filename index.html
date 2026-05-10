@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>GiraffeCycle</title>
+
   <style>
     body {
       margin: 0;
@@ -81,6 +82,13 @@
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
+      display: inline-block;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
     }
 
     .hero-slideshow {
@@ -165,7 +173,7 @@
       color: #0f3c28;
     }
 
-    /* CONTACT + SPONSOR */
+    /* CONTACT */
     .contact {
       margin-top: 10px;
     }
@@ -182,22 +190,6 @@
       font-size: 18px;
     }
 
-    .sponsor {
-      margin-top: 10px;
-    }
-
-    .sponsor p {
-      margin: 0 auto 10px;
-      color: #6f5c52;
-      line-height: 1.45;
-      max-width: 600px;
-    }
-
-    .sponsor img {
-      height: 50px;
-      margin-top: 5px;
-    }
-
     footer {
       text-align: center;
       padding: 12px;
@@ -207,6 +199,7 @@
     }
 
     @media (max-width: 768px) {
+
       header {
         padding: 16px 18px;
         flex-direction: column;
@@ -246,6 +239,7 @@
 <body>
 
 <header>
+
   <div class="logo-area">
     <img src="logo.jpeg" alt="GiraffeCycle Logo">
     <span class="logo-text">Giraffe<span>Cycle</span>™</span>
@@ -255,58 +249,111 @@
     <a href="#features">Features</a>
     <a href="#contact">Contact</a>
   </nav>
+
 </header>
 
 <section class="hero">
+
   <div class="hero-text">
-    <h1>Smarter breeding decisions for modern animal care teams.</h1>
-    <p>Track estrus behaviors, identify breeding windows, and organize reproductive data.</p>
-    <a class="button" href="mailto:info@giraffecycle.org">Contact Us</a>
+
+    <h1>
+      Smarter breeding decisions for modern animal care teams.
+    </h1>
+
+    <p>
+      Track estrus behaviors, identify breeding windows,
+      and organize reproductive data.
+    </p>
+
+    <a class="button"
+       href="https://buy.stripe.com/28E3cu90MagWg4EbzO6AM01"
+       target="_blank">
+       Activate Organization Access
+    </a>
+
   </div>
 
   <div class="hero-slideshow">
-    <div class="hero-slide"><img src="Mobile dashboard.jpg"></div>
-    <div class="hero-slide"><img src="Mobile GiraffeDetail.jpg"></div>
-    <div class="hero-slide"><img src="Mobile GiraffeDetail2.jpg"></div>
-    <div class="hero-slide"><img src="Mobile Onboarding.jpg"></div>
+    <div class="hero-slide">
+      <img src="Mobile dashboard.jpg">
+    </div>
+
+    <div class="hero-slide">
+      <img src="Mobile GiraffeDetail.jpg">
+    </div>
+
+    <div class="hero-slide">
+      <img src="Mobile GiraffeDetail2.jpg">
+    </div>
+
+    <div class="hero-slide">
+      <img src="Mobile Onboarding.jpg">
+    </div>
   </div>
+
 </section>
 
 <section class="section" id="features">
+
   <h2>Key Features</h2>
 
   <div class="features">
+
     <div class="feature">
       <h3>Behavior Tracking</h3>
       <p>Easily log daily reproductive behaviors.</p>
     </div>
+
     <div class="feature">
       <h3>Estrus Detection</h3>
       <p>Identify cycles from real patterns.</p>
     </div>
+
     <div class="feature">
       <h3>Breeding Windows</h3>
       <p>Know when to prepare and act.</p>
     </div>
+
     <div class="feature">
       <h3>Individual Tracking</h3>
       <p>Track each giraffe.</p>
     </div>
+
   </div>
+
 </section>
 
 <section class="section">
+
   <div class="highlight">
-    <div class="status">Breed Now</div>
+
+    <div class="status">
+      Breed Now
+    </div>
+
     <h2>Built for Real Zoo Workflows</h2>
-    <p>Designed for keepers and managers to turn observations into decisions.</p>
+
+    <p>
+      Designed for keepers and managers to turn
+      observations into decisions.
+    </p>
+
   </div>
+
 </section>
 
 <section class="section contact" id="contact" style="padding-bottom: 5px;">
+
   <h2>Get in Touch</h2>
-  <p>Have questions? Reach out anytime.</p>
-  <p class="contact-email">info@giraffecycle.org</p>
+
+  <p>
+    Have questions? Reach out anytime.
+  </p>
+
+  <p class="contact-email">
+    info@giraffecycle.org
+  </p>
+
 </section>
 
 <footer>
@@ -315,19 +362,29 @@
 </footer>
 
 <script>
+
   let heroSlideIndex = 0;
   autoHeroSlides();
 
   function autoHeroSlides() {
+
     let slides = document.getElementsByClassName("hero-slide");
+
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
+
     heroSlideIndex++;
-    if (heroSlideIndex > slides.length) { heroSlideIndex = 1; }
+
+    if (heroSlideIndex > slides.length) {
+      heroSlideIndex = 1;
+    }
+
     slides[heroSlideIndex - 1].style.display = "block";
+
     setTimeout(autoHeroSlides, 3000);
   }
+
 </script>
 
 </body>
